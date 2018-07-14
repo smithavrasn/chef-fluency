@@ -7,9 +7,9 @@
 #
 
 if node['platform_family'] == "rhel"
-	package='httpd'
+	package = "httpd"
 elsif node[platform_family] == "debain"
-	package='apache2'
+	package = "apache2"
 end
 
  
