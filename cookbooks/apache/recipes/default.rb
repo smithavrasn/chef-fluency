@@ -18,7 +18,7 @@ package 'apache' do
 end
 
 service 'apache' do
-	package_name package
+	service_name 'apache'
 	action [:enable , :start]
 end
 
