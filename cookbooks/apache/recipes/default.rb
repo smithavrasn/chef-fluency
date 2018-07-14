@@ -10,4 +10,4 @@ end
 service 'httpd' do
 action [:enable , :start]
 end
-include_recipe 'apache::webites.rb'
+include_recipe 'apache::websites.rb'
