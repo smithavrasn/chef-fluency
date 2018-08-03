@@ -1,10 +1,16 @@
 #
-# Cookbook:: java
+# Cookbook Name:: java
 # Recipe:: default
 #
-# Copyright:: 2018, The Authors, All Rights Reserved.
+# Copyright (c) 2015 The Authors, All Rights Reserved.
 #
-node.default["java"]["install_flavor"] = "openjdk"
-node.default["java"]["jdk_version"]    = "8"
+package "java1.7.0_75" do
+  action :install
+    version "1.7.0_75-13_20150818_170532"
+    end
 
-include_recipe "java"
+    package "java1.8.0_45" do
+      action :install
+        version "1.8.0_45-12_20150818_164126"
+        end
+
