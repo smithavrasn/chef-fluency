@@ -4,12 +4,10 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 #
- package "java1.7.0_75" do
-   action :install
-     version "1.7.0_75-13_20150818_170532"
-     end
+default['java']['jdk_version'] = '8'
+default['java']['install_flavor'] = 'oracle'
+default['java']['jdk']['7']['x86_64']['url'] = 'http://artifactory.example.com/artifacts/jdk-7u65-linux-x64.tar.gz'
+default['java']['jdk']['7']['x86_64']['checksum'] = 'The SHA-256 checksum of the JDK archive'
+default['java']['oracle']['accept_oracle_download_terms'] = true
 #
-     package "java1.8.0_45" do
-     action :install
-     version "1.8.0_45-12_20150818_164126"
-      end
+include_recipe 'java
