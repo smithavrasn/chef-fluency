@@ -22,7 +22,9 @@ end
 bash "insert_line" do
   user "root"
   code <<-EOS
-  echo "export JAVA_HOME=/opt/jdk1.7.0_79" >> /home/user/.bashrc
-  echo "export PATH=$PATH:/opt/jdk1.7.0_79/bin" >> /home/user/.bashrc
+  #echo "export JAVA_HOME=/opt/jdk1.7.0_79" >> /home/user/.bashrc
+  #echo "export PATH=$PATH:/opt/jdk1.7.0_79/bin" >> /home/user/.bashrc
+  echo "export JAVA_HOME=/opt/jdk1.7.0_79" >> /etc/profile
+  echo "export PATH=$PATH:/opt/jdk1.7.0_79/bin" >> /etc/profile 	
   EOS
 end
